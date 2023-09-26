@@ -13,4 +13,4 @@ berekening_vr = PRIJS_PER_MIN * tijd_vr
 berekening_tickets = PRIJS_TOEGANGSTICKET * aantal_tickets
 
 print(f"Jullie zijn met {aantal_tickets} mensen. De prijs voor de tickets is in totaal {berekening_tickets} euro")
-print(f"Je mag voor {berekening_vr} euro. {tijd_vr} minuten op de vr gamen.")
+print(f"Dit geweldige dagje-uit met {aantal_tickets} mensen in de speelhal met {tijd_vr} VR kost je maar{berekening_vr} euro. {tijd_vr} minuten op de vr gamen.")
