@@ -11,9 +11,13 @@ b = int(input("Vul nog een getal in. "))
 max = 0
 if a > b:
     max = a
-    print(f"a is het grootste getal: {max}")
+    min = b
+    print(f"Het minimum is: {min}")
+    print(f"Het maximum is: {max}")
 elif a < b:
+    max = b
     min = a
-    print(f"a is het kleinste getal: {min}")
+    print(f"Het minimum is: {min}")
+    print(f"Het maximum is: {max}")
 else:
     print("a en b zijn even groot")
