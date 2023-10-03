@@ -8,6 +8,10 @@
 
 a = int(input("Vul een getal in. "))
 b = int(input("Vul nog een getal in. "))
+max = 0
 if a > b:
     max = a
     print(f"a is het grootste getal: {max}")
+elif a < b:
+    min = a
+    print(f"a is het kleinste getal: {min}")
