@@ -1,5 +1,5 @@
-PRIJS_TOEGANGSTICKET = 745
-PRIJS_PER_5MIN = 37
+PRIJS_TOEGANGSTICKET = int(input("Hoeveel kost een Toegangsticket pp in centen? "))
+PRIJS_PER_5MIN = int(input("Wat is de prijs per 5 minuten in centen? "))
 aantal_tickets = int(input("Hoeveel toegangstickets wil je kopen? "))
 tijd_vr = int(input("Hoeveel minuten wil je op de Vr gamebril spelen?"))
 
