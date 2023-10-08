@@ -1,47 +1,14 @@
-# Bepaal met behulp van een aantal vragen in jouw sollicitatie.py 
-# of de kandidaat mag gaan solliciteren naar de functie.
+print("Je zal nu een aantal vragen krijgen om te kijken of je in aanmerking komt voor een sollicitatiegesprek:")
+rijbewijs = input("Ben je in het bezit van een geldig vrachtwagen rijbewijs? ja/nee ")
+hoed = input("Ben je in het bezit van een hoge hoed? ja/nee ")
+GEWICHT = float(input("Hoe zwaar ben je in kg? "))
+LENGTE = int(input("Hoe lang ben je in centimeter? "))
+certificaat = input("Heb je een certificaat voor 'Overleven met gevaarlijk personeel'? ja/nee ")
+DIEREN_DRESSUUR = float(input("Hoelang heb je praktijkervaring met dieren-dressuur? Geef het antwoord in jaren. "))
+JONGLEREN = float(input("Hoelang heb je ervaring met jongleren? Geef het antwoord in jaren. "))
+ACROBATIEK = float(input("Hoelang heb je ervaring met acrobatiek? Geef het antwoord in jaren. "))
 
-# Stel eerst alle vragen en ga daarna pas beoordelen aan de hand van de gegeven antwoorden 
-# of de kandidaat mag solliciteren.
-
-# De kandidaat moet wel voldoen aan de volgende criteria:
-
-# In bezit van een geldig Vrachtwagen rijbewijs. 
-# Een echte circusdirecteur rijdt ook de grootste circuswagen zelf!
-# In bezit van een hoge hoed.
-# Is zwaarder dan 90 kg en lichter dan 120 kg
-# Is langer dan 150 cm en korter dan 220 cm
-# Heeft Certificaat “Overleven met gevaarlijk personeel”
-# Heeft:
-# minimaal 4 jaar praktijkervaring met dieren-dressuur OF
-# minimaal 5 jaar ervaring met jongleren OF
-# minimaal 3 jaar praktijkervaring met acrobatiek.
-# Let op: Vraag de jaren ervaring afzonderlijk voor alle kunsten: dieren-dressuur, 
-# jongleren én acrobatiek. Dus het programma stelt hierover precies 3 vragen!
-
-
-
-# Let op: De vragen met getallen mogen de kritieke grens (zoals 4 jaar, of 150 cm) 
-# van een criterium niet verklappen.  Anders krijg je geen eerlijk antwoord van de kandidaten.
-
-# Dus je vraagt bijvoorbeeld:
-
-# 'Wat is uw lichaamsgewicht?’ in plaats van 'Weegt  u zwaarder dan 90 kg en lichter dan 120 kg? J/N’
-# ‘Hoeveel jaar praktijkervaring heeft u met dit-of-dat ?’ in plaats van 
-# 'Heeft u meer dan 4 jaar praktijkervaring met dit-of-dat? J/N’
-
-# Let op: Eerst alle vragen stellen, daarna pas de geschiktheid berekenen 
-# op basis van de gegeven antwoorden! 
-# Pas na het berekenen van de geschiktheid geeft u de uitslag van de sollicitatie aan de invuller.
-
-
-# Gebruik zeker de volgende technieken:
-
-# if-elif-else
-# gebruik and en or  in condities
-# Maak constanten voor alle getallen die je verder gebruikt in de code. Bijvoorbeeld:
-
-# Een constante in Python is technisch gezien een variabele 
-# en heeft een naam in hoofdletters wat aangeeft dat de waarde niet mag veranderen 
-# gedurende uitvoering van het programma.
-
+if rijbewijs and hoed == "ja" and GEWICHT >= 90 and GEWICHT <= 120 and LENGTE >= 150 and LENGTE <= 220 and certificaat == "ja" and (DIEREN_DRESSUUR >= 4 or JONGLEREN >= 5 or ACROBATIEK >= 3):
+    print("Je komt in aanmerking voor een sollicitatiegesprek. Stuur je cv naar ons op. ")
+else:
+    print("Helaas, je komt niet in aanmerking voor een sollicitatie gesprek. ")
