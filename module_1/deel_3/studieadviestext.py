@@ -14,6 +14,32 @@ COMPETENTIE_STELLING_4 = 'Ik vermijd assessments (CJV) en feedback van kritische
 COMPETENTIE_STELLING_5 = 'Ik vergelijk mezelf met anderen die beter lijken te zijn.'
 COMPETENTIE_STELLING_6 = 'Ik voel geen interesse in nieuwe programmeertechnieken.'
 COMPETENTIE_STELLING_7 = 'Ik kopieer code van anderen en lever dat in alsof het helemaal van mij is.'
+aantal_weken = int(input("Hoeveel weken studeer je nu?"))
+
+print(OPTIES)
+vraag_1 = int(input(COMPETENTIE_STELLING_1))
+vraag_2 = int(input(COMPETENTIE_STELLING_2))
+vraag_3 = int(input(COMPETENTIE_STELLING_3))
+vraag_4 = int(input(COMPETENTIE_STELLING_4))
+vraag_5 = int(input(COMPETENTIE_STELLING_5))
+if aantal_weken >= 10:
+    vraag_6 = int(input(COMPETENTIE_STELLING_6))
+    vraag_7 = int(input(COMPETENTIE_STELLING_7))
+else:
+    vraag_6 = 0
+    vraag_7 = 0
+print(OPTIES)
+
+punten = vraag_1 + vraag_2 + vraag_3 + vraag_4 + vraag_5 + vraag_6 + vraag_7
+print(punten)
+
+stellingen = [COMPETENTIE_STELLING_1, COMPETENTIE_STELLING_2, COMPETENTIE_STELLING_3, COMPETENTIE_STELLING_4, COMPETENTIE_STELLING_5, COMPETENTIE_STELLING_6, COMPETENTIE_STELLING_7]
+vragen = [vraag_1, vraag_2, vraag_3, vraag_4, vraag_5, vraag_6, vraag_7]
+vragen.remove(vraag_6)
+vragen.remove(vraag_7)
+
+
+
 
 COMPETENTIE_ADVIES_TITEL = '''
 *********************** STUDIEADVIES ***********************'''
@@ -30,3 +56,19 @@ COMPETENTIE_ADVIES_GERUSTSTELLEND = '''
 Het lijkt erop dat je voldoende zelfvertrouwen, voldoening en plezier ervaart in
 het leren programmeren. Mocht het een keer minder gaan, maak je geen zorgen. Have fun!
 '''
+gemiddelde_score = punten / len(vragen)
+exacte_score = round(gemiddelde_score, 0)
+
+
+print(gemiddelde_score)
+print(exacte_score)
+if exacte_score < 0:
+    exacte_score = 0
+    print(COMPETENTIE_ADVIES_GERUSTSTELLEND)
+    print(exacte_score)
+elif exacte_score == 2:
+    print(COMPETENTIE_ADVIES_ZORGELIJK)
+    print(exacte_score)
+else:
+    print(COMPETENTIE_ADVIES_TWIJFELACHTIG)
+    print(exacte_score)
