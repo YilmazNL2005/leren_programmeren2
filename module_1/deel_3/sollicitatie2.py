@@ -3,7 +3,7 @@ print("Je zal nu een aantal vragen krijgen om te kijken of je in aanmerking komt
 snor = 0
 haar_k = ""
 haar_l = 0
-ondernemer_t = 0
+TIJD_ONDERNEMER = 0
 aantal_medewerkers = 0
 
 rijbewijs = input("Ben je in het bezit van een geldig vrachtwagen rijbewijs? ja/nee ")
@@ -18,9 +18,7 @@ diploma = input("Ben je in het bezit van een MBO-4 ondernemen diploma? ja/nee ")
 ondernemer = input("Ben je een ondernemer? ")
 if ondernemer == "ja":
     TIJD_ONDERNEMER = float(input("Hoelang ben je al ondernemer? Geef het antwoord in jaren. "))
-    ondernemer_t = TIJD_ONDERNEMER
-    MEDEWERKERS = int(input("Hoeveel medewerkers heb je in loondienst? "))
-    aantal_medewerkers = MEDEWERKERS
+    aantal_medewerkers = int(input("Hoeveel medewerkers heb je in loondienst? "))
 geslacht = input("Wat is je geslacht? man/vrouw ")
 if geslacht == "man":
     SNOR = int(input("Hoe breed is je snor in centimeters? "))
@@ -38,7 +36,7 @@ LENGTE_OK = LENGTE >= 150 and LENGTE <= 220
 certificaat_ok = certificaat == "ja"
 DIEREN__JONG_ACRO_OK = DIEREN_DRESSUUR >= 4 or JONGLEREN >= 5 or ACROBATIEK >= 3
 DIPLOMA_OK = diploma == "ja" #or 
-ONDERNEMER_TIJD_MEDEWERKERS_OK = ondernemer_t >= 3 and aantal_medewerkers >= 5
+ONDERNEMER_TIJD_MEDEWERKERS_OK = TIJD_ONDERNEMER >= 3 and aantal_medewerkers >= 5
 SNOR_OK = snor >= 10 #or 
 HAARKLEUR_LENGTE_OK = haar_k == "rood krulhaar" and haar_l >= 20
 reden_afwijzing = ["rijbewijs bezit je niet", "je bezit geen hoed", "je hebt niet het juiste gewicht", "je hebt niet de juiste lengte", "je hebt geen certificaat", "je hebt te weinig ervaring met dieren_dressuur, Jongleren of Acrobatiek", "je hebt geen diploma", "je bent geen of niet lang genoeg ondernemer of je hebt te weinig medewerkers in loondienst", "je snor is niet breed genoeg", "je haarkleur/haarlengte is niet juist"]

@@ -4,12 +4,13 @@ max = 0
 if a > b:
     max = a
     min = b
-    print(f"Het minimum is: {min}")
-    print(f"Het maximum is: {max}")
 elif a < b:
     max = b
     min = a
-    print(f"Het minimum is: {min}")
-    print(f"Het maximum is: {max}")
 else:
+    max = a
+    min = a
     print("a en b zijn even groot")
+
+print(f"Het minimum is: {min}")
+print(f"Het maximum is: {max}")
