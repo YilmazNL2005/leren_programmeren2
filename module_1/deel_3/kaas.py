@@ -24,6 +24,10 @@ elif kaas_geel == "nee":
     elif blauwe_schimmel == "nee":
         korst_kaas = input("Heeft de kaas korst? ")
         if korst_kaas == "ja":
-            print("Camenbert")
+            stink_kaas = input("Stinkt de kaas? ")
+            if stink_kaas == "ja":
+                print("Brie")
+            else:    
+                print("Camenbert")
         elif korst_kaas == "nee":
             print("Mozzarella")
