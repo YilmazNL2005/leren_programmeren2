@@ -4,18 +4,21 @@ aanwezig_dranken = input("Is er drank aanwezig? ")
 aanwezig_chips = input("Is er chips aanwezig? ")
 naam_gastheer = input("Wat is de naam van de gastheer? ")
 
-gastheer = aanwezig_gastheer == "ja" and naam_gastheer != "oorschot"
+#gastheer = aanwezig_gastheer == "ja" and naam_gastheer != "oorschot"
 #gastheer_fout = naam_gastheer != 
-gasten = aanwezig_gasten == "ja"
-drank = aanwezig_dranken == "ja"
-chips = aanwezig_chips == "ja"
+#gasten = aanwezig_gasten == "ja"
+#drank = aanwezig_dranken == "ja"
+#chips = aanwezig_chips == "ja"
 
 
-party_a = gasten and chips and drank
-party_b = gastheer and drank
+# party_a = gasten and chips and drank
+# party_b = gastheer and drank
 
+gasten_ok = aanwezig_gasten == "ja" and aanwezig_chips == "ja" and aanwezig_dranken == "ja" and naam_gastheer != "oorschot" # gasten als ze aanwezig zijn en chips aanwezig
+gastheer_slb = naam_gastheer != "oorschot" or aanwezig_chips == "ja" and aanwezig_dranken == "ja" # als het niet oorschot beginnen mits er wel drank en chips aanwezig is
+gastheer_yilmaz = naam_gastheer == "yilmaz" # alleen in geval van Yilmaz = altijd feest
 
-if party_a or party_b or naam_gastheer == "yilmaz" :
+if gasten_ok or gastheer_slb or gastheer_yilmaz == True:
     print('Start the Party')
 else:
     print('No Party')
