@@ -8,7 +8,7 @@ gasten_ok = (aanwezig_gasten >= 4 and aanwezig_gasten < 20 ) and aanwezig_chips 
 gastheer_slb = naam_gastheer != "oorschot" and aanwezig_chips == "ja" and aanwezig_dranken == "ja" # als het niet oorschot beginnen mits er wel drank en chips aanwezig is
 gastheer_yilmaz = naam_gastheer == "yilmaz" # alleen in geval van Yilmaz = altijd feest
 
-if gasten_ok or gastheer_slb or gastheer_yilmaz == True:
+if gasten_ok or gastheer_slb or gastheer_yilmaz:
     print('Start the Party')
 else:
     print('No Party')

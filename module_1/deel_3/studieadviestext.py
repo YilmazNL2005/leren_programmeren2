@@ -25,18 +25,20 @@ vraag_5 = int(input(COMPETENTIE_STELLING_5))
 if aantal_weken >= 10:
     vraag_6 = int(input(COMPETENTIE_STELLING_6))
     vraag_7 = int(input(COMPETENTIE_STELLING_7))
+    vragen = [vraag_1, vraag_2, vraag_3, vraag_4, vraag_5, vraag_6, vraag_7]
 else:
     vraag_6 = 0
     vraag_7 = 0
+    vragen = [vraag_1, vraag_2, vraag_3, vraag_4, vraag_5]
 print(OPTIES)
 
 punten = vraag_1 + vraag_2 + vraag_3 + vraag_4 + vraag_5 + vraag_6 + vraag_7
 print(punten)
 
 stellingen = [COMPETENTIE_STELLING_1, COMPETENTIE_STELLING_2, COMPETENTIE_STELLING_3, COMPETENTIE_STELLING_4, COMPETENTIE_STELLING_5, COMPETENTIE_STELLING_6, COMPETENTIE_STELLING_7]
-vragen = [vraag_1, vraag_2, vraag_3, vraag_4, vraag_5, vraag_6, vraag_7]
-vragen.remove(vraag_6)
-vragen.remove(vraag_7)
+# vragen = [vraag_1, vraag_2, vraag_3, vraag_4, vraag_5, vraag_6, vraag_7]
+# vragen.remove(vraag_6)
+# vragen.remove(vraag_7)
 
 
 
