@@ -32,12 +32,12 @@ test('depressed', expected, calculated)
 
 nr = -7.25
 expected = int(-7)
-calculated = nr # use one function to calculate expected number
+calculated = round(nr) # use one function to calculate expected number
 test('pointless', expected, calculated)
 
 nr = 15.11
 expected = 16
-calculated = nr # use one function to calculate expected number
+calculated = ceil(nr) # use one function to calculate expected number
 test('sky-is-the-limit', expected, calculated)
 
 report()
