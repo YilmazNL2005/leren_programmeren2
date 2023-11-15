@@ -41,6 +41,3 @@ calculated = ceil(nr) # use one function to calculate expected number
 test('sky-is-the-limit', expected, calculated)
 
 report()
-
-
-
