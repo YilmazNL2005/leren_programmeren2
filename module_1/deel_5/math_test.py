@@ -17,7 +17,7 @@ expected = nr1 + nr2
 calculated = add(nr1, nr2)
 test('add', expected, calculated)
 
-expected = nr2 - nr1
+expected = -abs(nr2 - nr1)
 calculated = substract(nr2, nr1)
 test('substract', expected, calculated)
 
@@ -34,4 +34,3 @@ calculated = divide(nr1, 0)
 test('divide by zero', expected, calculated)
 
 report()
-

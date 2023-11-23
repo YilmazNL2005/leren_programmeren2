@@ -15,10 +15,12 @@ def multiply(nr: float, nr2: float) -> float:
   return nr * nr2
 
 def divide(nr: float, nr2: float) -> float:
-  berekening = nr / 0
-  if berekening == ZeroDivisionError:
-    berekening = None
+  try:
+    berekening = nr / nr2
     return berekening
+  except ZeroDivisionError:
+      berekening = None
+      return berekening
 
 # bom plus bom = kaboem
 # bliksem gedeeld door doodskop = 3
