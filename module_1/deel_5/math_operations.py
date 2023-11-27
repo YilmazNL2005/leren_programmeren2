@@ -1,9 +1,9 @@
 # example:
-def increment(nr: float) -> float:
-  return nr + 1
+def increment(nr: float, nr2: float) -> float:
+  return nr + nr2
 
-def decrement(nr: float) -> float:
-  return nr - 1
+def decrement(nr: float, nr2: float) -> float:
+  return nr - nr2
 
 def add(nr: float, nr2: float) -> float:
   return nr + nr2
