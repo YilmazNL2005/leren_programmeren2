@@ -22,14 +22,25 @@ def divide(nr: float, nr2: float) -> float:
       berekening = None
       return berekening
 
-def min_max(nr1: float, nr2: float) -> float:
+def min_max(nr1: float, nr2: float) -> str:
+  maximum = max(nr1,nr2)
+  minimum = min(nr1,nr2)
   if nr1 < nr2:
-    nr1,nr2 = nr2,nr1
-    return f'Maximum: {nr2} en minimum: {nr1}'
-  elif nr1 > nr2:
-    return f'Maximum: {nr1} en minimum: {nr2}'
-  else:
-    return 'Beide getallen zijn even groot'
+    maximum,minimum = minimum,maximum
+  return f'maximum: {maximum} en minimum: {minimum}'
+
+
+
+
+
+
+# if nr1 < nr2:
+#   nr1,nr2 = nr2,nr1
+#   return 
+# elif nr1 > nr2:
+#   return f'Maximum: {nr1} en minimum: {nr2}'
+# else:
+#   return 'Beide getallen zijn even groot'
 
 # Definieer een function:
 # met een duidelijke naam en alle type aanduidingen
