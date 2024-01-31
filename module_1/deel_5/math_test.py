@@ -18,7 +18,7 @@ calculated = add(nr1, nr2)
 test('add', expected, calculated)
 
 expected = -abs(nr2 - nr1)
-calculated = substract(nr2, nr1)
+calculated = substract(nr1, nr2)
 test('substract', expected, calculated)
 
 expected = nr1 * nr2

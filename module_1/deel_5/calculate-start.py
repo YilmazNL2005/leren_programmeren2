@@ -42,4 +42,16 @@ result1 = f"maximum: {nr1} en minimum: {nr2}"
 result2 = min_max(nr1, nr2)
 test('expression-6', result1, result2)
 
+# nr1 = 3
+# nr2 = 11
+# nr3 = 37
+# nr4 = 79
+#              40       111
+result1 = nr4 * nr1 + nr3 / nr3 * nr1 - nr2
+result2 = substract(add(multiply(multiply(divide(nr3,nr3),nr1),nr4),nr1),nr2) 
+        #nr1 + (nr3 / nr3) * nr1  
+        #(nr4 * nr1) + ((nr3 / nr3) * nr1) - nr2
+test('expression-4',result1, result2)
+
 report()
+
