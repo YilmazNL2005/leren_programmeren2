@@ -22,16 +22,16 @@ random.shuffle(stapel)
 
 hand = []
 
-for x in range(7):                                  
-    getrokken_kaart = stapel[0]
-    hand.append(getrokken_kaart)
-    stapel.remove(getrokken_kaart)
-    print(f"kaart {x + 1} : {(hand[x])}")
-    print(f"{x} ")
-hand = []
-for z in range(7):
-    hand.append(stapel.pop(0))
-    print(f"kaart {z + 1} : {(hand[z])}")
+# for x in range(7):                                  
+#     getrokken_kaart = stapel[0]
+#     hand.append(getrokken_kaart)
+#     stapel.remove(getrokken_kaart)
+#     print(f"kaart {x + 1} : {(hand[x])}")
+#     print(f"{x} ")
+# hand = []
+# for z in range(7):
+#     hand.append(stapel.pop(0))
+#     print(f"kaart {z + 1} : {(hand[z])}")
 
 for y in range(7):
     print(f"kaart {y + 1} {stapel.pop(0)}")
