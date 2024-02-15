@@ -11,14 +11,13 @@ for z in range(9):
     kleur = robotArm.scan()
     if kleur == "white":
         robotArm.moveRight()
-        robotArm.drop()
-        if z < 8:
-            robotArm.moveLeft()
-            robotArm.moveLeft()
+        robotArm.drop()        
+        robotArm.moveLeft()
     else:
         robotArm.drop()
-        if z < 8:
-            robotArm.moveLeft()
+    if z < 8:
+        robotArm.moveLeft()
+
 
 # Na jouw code wachten tot het sluiten van de window:
 robotArm.wait()

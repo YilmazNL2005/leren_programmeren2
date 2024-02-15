@@ -1,13 +1,11 @@
 begingetal = 50
-getal = 50
-print(getal)
+nieuw_getal = 50
+print(nieuw_getal)
 
-som = f"{begingetal} "
-begingetal += 1
+som = f"50"
 
-while getal < 1000:
-    getal += begingetal + 1
-    som += f" + {begingetal} "
-    print(som)
+while nieuw_getal < 1000:
     begingetal += 1
-    print(getal)
+    nieuw_getal += begingetal
+    som += f"+{begingetal}"
+    print(f"{som} = {nieuw_getal}")

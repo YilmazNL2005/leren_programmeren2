@@ -11,14 +11,13 @@ while rijen != 0:
     if scan != "red":
         robotArm.drop()
         robotArm.moveRight()
-        rijen -= 1
     else:
         for y in range(rijen):
             robotArm.moveRight()
         robotArm.drop()
         for y in range(rijen - 1):
             robotArm.moveLeft()
-        rijen -= 1
+    rijen -= 1
 
 # Na jouw code wachten tot het sluiten van de window:
 robotArm.wait()

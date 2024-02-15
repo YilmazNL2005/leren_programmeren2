@@ -21,8 +21,8 @@ robotArm = RobotArm('exercise 9')
 #     for y in range(5):
 #         robotArm.moveLeft()
 
-for x in range(1,5): 
-    for a in range(x):
+for stapel in range(1,5): 
+    for blok3 in range(stapel):
         robotArm.grab()
         for b in range(5):
             robotArm.moveRight()
