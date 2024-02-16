@@ -7,23 +7,31 @@ VIP_LIST = ('jeroen', 'jouke', 'rudi')
 
 # Bouw hieronder de flowchart na
 
+ALSJEBLIEFT = "Alstublieft, complimenten van het huis."
+SORRY = "Sorry je mag geen alcohol bestellen onder de 21."
+
+def probeer_in_jaar(jaar):
+    return f"Probeer het in {jaar} jaar nog eens. "
+
+def bandkleur(kleur):
+    return f"Je krijgt van mij een {kleur} bandje"
+
+
 kleur_bandje = "geen bandje"
 stempel = "geen stempel"
 
 age = int(input("Hoe oud ben je in hele jaren? "))
 if age < 18:
     print("Sorry je mag niet naar binnen.")
-    when_access = 18
-    print(f"Probeer het in {when_access - age} jaar nog eens. ")
+    print(probeer_in_jaar(18 - age))
     exit()
 else:
     name = input("Wat is je naam? ")
     if name in VIP_LIST:
         if age >= 21:
-            kleur_bandje = "blauw"
-            print(f"Je krijgt van mij een {kleur_bandje} bandje")
+            print(bandkleur("blauw"))
         else:
-            kleur_bandje = "rood"
+            print(bandkleur("rood"))
     else:
         if age >= 21:
             stempel = "stempel"
@@ -33,28 +41,26 @@ else:
         if kleur_bandje == "geen bandje":
             print(f"Alsjeblieft je {drinks}, dat is dan €{PRIJS_COLA}")
         else:
-            print("Alstublieft, complimenten van het huis.")
-    if drinks == "bier":
+            print(ALSJEBLIEFT)
+    elif drinks == "bier":
         if kleur_bandje != "geen bandje" or stempel != "geen stempel":
             if kleur_bandje != "geen bandje":
-                print("Alstublieft, complimenten van het huis.")
+                print(ALSJEBLIEFT)
             else:
                 print(f"Alsjeblieft je {drinks}, dat is dan €{PRIJS_BIER}")
         else:
-            print("Sorry je mag geen alcohol bestellen onder de 21.")
-            when_access = 21
-            print(f"Probeer het in {when_access - age} jaar nog eens. ")
+            print(SORRY)
+            print(probeer_in_jaar(21 - age))
             exit()
-    if drinks == "champagne":
+    elif drinks == "champagne":
         if kleur_bandje == "geen bandje":
             print("Sorry alleen vips mogen champagne bestellen.")
             exit()
         elif kleur_bandje == "blauw":
             print(f"Alsjeblieft je {drinks}, dat is dan €{PRIJS_CHAMPAGNE}")
         else:
-            print("Sorry je mag geen alcohol bestellen onder de 21.")
-            when_access = 21
-            print(f"Probeer het in {when_access - age} jaar nog eens. ")
+            print(SORRY)
+            print(probeer_in_jaar(21 - age))
             exit()
     else:
         print("Sorry geen idee wat je bedoeld, hier een glaasje water.")
