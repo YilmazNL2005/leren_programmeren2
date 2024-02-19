@@ -16,7 +16,6 @@ def probeer_in_jaar(jaar):
 def bandkleur(kleur):
     return f"Je krijgt van mij een {kleur} bandje"
 
-
 kleur_bandje = "geen bandje"
 stempel = "geen stempel"
 
