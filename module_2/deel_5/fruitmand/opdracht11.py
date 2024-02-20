@@ -13,8 +13,12 @@ while True:
             else:
                 aantal_niet_rond += 1
     break
-print(f"De kleur {gekozen_kleur} zit {yes_no} in de fruitmand.")
-print(f"Er zijn {aantal_rond} ronde fruitsoorten")
-print(f"Er zijn {aantal_niet_rond} niet ronde fruitsoorten")
+verschil = aantal_rond - aantal_niet_rond
+abs(verschil)
 
-# De opdracht is nog Niet klaar.
+if aantal_rond > aantal_niet_rond:
+    print(f"Er zijn {verschil} meer ronde vruchten dan niet ronde vruchten in de kleur {gekozen_kleur}")
+elif aantal_niet_rond > aantal_rond:
+    print(f"Er zijn {verschil} meer niet ronde vruchten dan ronde vruchten in de kleur {gekozen_kleur}")
+else:
+    print(f"Er zijn {aantal_rond} ronde vruchten en {aantal_niet_rond} niet ronde vruchten.")
