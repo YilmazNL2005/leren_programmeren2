@@ -8,15 +8,9 @@ high_low = ""
 raad = 0
 how_close = ""
 
-
-
-while True:
-    start = input("Wil je beginnen? typ (start)").lower()
-    if start == "start":
-        break
+# Begin
 
 print(f"Welkom bij Raad Het Getal \n Je zult max {MAX_RONDES} spelen. \n Bij elke ronde krijg je een getal tussen de 1 en de 1000. \n Je krijgt in totaal {aantal_kansen} kansen om een getal goed te raden. \n Elke keer als je een getal goed raad, krijg je een punt. \n Het programma zal aangeven hoe dichtbij je in de buurt bent van het getal en of je hoger of lager moet raden. \n Succes!!! ")
-
 
 teRaden_getal = random.randint(1, 1000)
 verschil = teRaden_getal - raad

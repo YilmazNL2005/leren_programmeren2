@@ -13,8 +13,7 @@ while True:
             else:
                 aantal_niet_rond += 1
     break
-verschil = aantal_rond - aantal_niet_rond
-abs(verschil)
+verschil = abs(aantal_rond - aantal_niet_rond)
 
 if aantal_rond > aantal_niet_rond:
     print(f"Er zijn {verschil} meer ronde vruchten dan niet ronde vruchten in de kleur {gekozen_kleur}")
