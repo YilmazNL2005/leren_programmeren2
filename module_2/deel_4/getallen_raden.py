@@ -18,7 +18,7 @@ verschil = teRaden_getal - raad
 while aantal_kansen > 0 and huidige_ronde <= MAX_RONDES:
     if teRaden_getal == raad:
         teRaden_getal = random.randint(1, 1000)
-    print(teRaden_getal)
+    print(teRaden_getal) # voor debugging
     print(f"Dit is ronde: {huidige_ronde} \n Je hebt {aantal_punten} punten \n Je hebt {aantal_kansen} kansen")
     raad = int(input("Noem een getal tussen de 1 en de 1000. \n "))
     verschil = teRaden_getal - raad
