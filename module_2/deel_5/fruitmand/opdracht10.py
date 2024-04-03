@@ -1,4 +1,4 @@
-from fruitmand import fruitmand
+from fruitmand_2 import fruitmand
 from operator import itemgetter
 
 # lijst = sorted(fruitmand, key=lambda d: d["weight"])

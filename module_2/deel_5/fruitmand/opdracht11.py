@@ -1,4 +1,4 @@
-from fruitmand import fruitmand
+from fruitmand_2 import fruitmand
 
 gekozen_kleur = input("Noem een kleur. ")
 yes_no = "niet"

@@ -1,3 +1,3 @@
-from fruitmand import fruitmand
-for x in range(len(fruitmand)):
-    print(fruitmand[x]["name"])
+from fruitmand_2 import fruitmand
+for fruit in fruitmand:
+    print(fruit["name"])

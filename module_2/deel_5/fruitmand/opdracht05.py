@@ -1,3 +1,4 @@
-from fruitmand import fruitmand
-for x in range(len(fruitmand) - 1, -1, -1):
-    print(fruitmand[x]["name"])
+from fruitmand_2 import fruitmand
+print(fruitmand)
+for fruit in reversed(fruitmand):
+    print(fruit["name"])

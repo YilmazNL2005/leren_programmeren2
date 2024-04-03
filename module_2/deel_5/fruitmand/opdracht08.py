@@ -1,12 +1,16 @@
-from fruitmand import fruitmand
+from fruitmand_2 import fruitmand
 fruitmand.append({
     'name' : 'watermeloen',
     'weight' : 2000,
     'color' : 'groen',
     'round' : True
 })
-print(fruitmand[7]["name"])
+
+for y in range(len(fruitmand)):
+    if fruitmand[y]["name"] == 'watermeloen':
+        print(fruitmand[y]["name"])
+
 totaal_gewicht = 0
-for x in range(len(fruitmand)):
-    totaal_gewicht += fruitmand[x]["weight"]
+for fruit in fruitmand:
+    totaal_gewicht += fruit["weight"]
 print(f"{totaal_gewicht / 1000} kg")

@@ -1,9 +1,13 @@
 import random
 
-MAX_RONDES = 3
-aantal_kansen = 10
-huidige_ronde = 1
+# hier worden alle gegevens opgeslagen die relevant zijn voor de gebruiker
+MAX_RONDES = 3 # Dit is het maximaal aantal rondes die gespeeld kunnen worden.
+aantal_kansen = 10 # Dit is het aantal kansen waar de gebruiker mee begint
+huidige_ronde = 1 # Dit is 
 aantal_punten = 0
+
+##############################
+
 high_low = ""
 raad = 0
 how_close = ""

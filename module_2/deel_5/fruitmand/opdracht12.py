@@ -11,7 +11,10 @@ nl_kleuren = {
     "green" : "groene", 
     "yellow" : "gele", 
     "blue" : "blauwe", 
-    "brown" : "bruine" 
+    "brown" : "bruine",
+    "black" : "zwarte",
+    "purple" : "paarse",
+    "pink" : "roze"
 }
 
 for fruit in fruitmand:
