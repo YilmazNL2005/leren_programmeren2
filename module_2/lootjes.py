@@ -40,6 +40,9 @@
 #         lootjes.clear()
 # print(lootjes)
 
+
+
+
 import random
 
 aantal_deelnemers = 0
@@ -78,7 +81,10 @@ while True:
         lijst_deelnemers_b = reset_lijst_deelnemers.copy()
         lootjes.clear()
         # print("opnieuw")
-print(lootjes)
+# print(lootjes)
 
-inzien_lootje = input("Om te kunnen zien wie je hebt getrokken, moet je je naam invullen. ")
-print("Je hebt:", lootjes[inzien_lootje], "getrokken" )
+while True:
+    inzien_lootje = input("Om te kunnen zien wie je hebt getrokken, moet je je naam invullen. Om te stoppen typ (stop) ").lower()
+    if inzien_lootje == "stop":
+        break
+    print("Je hebt:", lootjes[inzien_lootje], "getrokken" )

@@ -1,0 +1,35 @@
+Start Programma
+
+aantal_deelnemers wordt 0
+lijst_deelnemers_a wordt lege lijst
+nieuwe_deelnemer wordt ""
+meer_deelnemers wordt ""
+
+zolang meer_deelnemers geen "nee" is:
+    als: aantal_deelnemers groter of gelijk is aan 3:
+        meer_deelnemers wordt input
+    nieuwe_deelnemer wordt input
+    als: nieuwe_deelnemer nog niet in lijst_deelnemers_a zit:
+        aantal_deelnemers wordt +1
+        nieuwe_deelnemer wordt toegevoegd aan lijst_deelnemers_a
+        lijst_deelnemers_a wordt getoond aan de gebruiker
+
+lootjes wordt 2 losse namen die in de twee lijstjes zitten 
+die bij elkaar een lootje vormen.
+reset_lijst_deelnemers wordt lijst_deelnemers_a
+lijst_deelnemers_b wordt lijst_deelnemers_a
+
+getrokken_lootjes wordt leeg lijstje waar in 1 item 2 verschillende items in zitten. als voorbeeld een woordenboek. Daarin staat een woord en de betekenis. 
+zolang: het inhoudsgetal niet gelijk is aan de hoeveelheid namen in lijst_deelnemers_a:
+    getrokken_a wordt een willekeurige keuze uit lijst_deelnemers_a
+    getrokken_b wordt een willekeurige keuze uit lijst_deelnemers_b
+    (keuze wordt gemaakt door het programma)
+    als: getrokken_a niet hetzelfde is als getrokken_b:
+        getrokken_lootjes krijgt getrokken_a en getrokken_b samen
+        getrokken_a zit ook in lijst_deelnemers_a dus deze wordt verwijderd. 
+        getrokken_b zit ook in lijst_deelnemers_b dus deze wordt verwijderd. 
+    als: getrokken_a hetzelfde is als getrokken_b:
+        getrokken_lootjes wordt gereset
+        lijst_deelnemers_a wordt reset_lijst_deelnemers
+        lijst_deelnemers_b wordt reset_lijst_deelnemers
+getrokken_lootjes wordt getoond aan de gebruiker
