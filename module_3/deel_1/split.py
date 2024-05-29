@@ -42,10 +42,34 @@ def verschil_control_nummer(nummers:list):
     return abs(aantal_unieke_nummers(nummers) - nummers[2])
 
 def lijst_sorteerder(nummers:list):
+    return sorted(nummers)
+
+def unieke_lijst_sorteerder(nummers:list):
+    return sorted(unieke_nummers(nummers))
+
+def hoeveelheid_unieke_nummers(nummers:list):
+    telling_elementen = {}
+    for nummer in nummers:
+        aantalkeer = telling_elementen[nummer]+1 if nummer in telling_elementen else 1
+        telling_elementen[nummer] = aantalkeer
+    return telling_elementen
+
+def unieke_nummers_delen_a(nummers:list):
+    delen_a = []
+    for nummer in nummers:
+        if nummer % nummers[1] == 0:
+            delen_a.append(nummer)
+    return sorted(delen_a)
+
+def unieke_nummers_delen_b(nummers:list):
+    delen_b = []
+    for nummer in nummers:
+        if nummer % 8 == 0:
+            delen_b.append(nummer)
+    return sorted(delen_b)
+
+def nummer_voorkomen(nummers:list):
     return
-
-
-
 
 
 lijstje_nummers = [1, 10, 33, 9, 81, 69]
@@ -60,3 +84,10 @@ print(grootste_delen(lijstje_nummers))
 print(unieke_nummers(lijstje_nummers))
 print(aantal_unieke_nummers(lijstje_nummers))
 print(verschil_control_nummer(lijstje_nummers))
+print(lijst_sorteerder(lijstje_nummers))
+print(unieke_lijst_sorteerder(lijstje_nummers))
+print(hoeveelheid_unieke_nummers(lijstje_nummers))
+print(unieke_nummers_delen_a(lijstje_nummers))
+print(unieke_nummers_delen_b(lijstje_nummers))
+print(nummer_voorkomen(lijstje_nummers))
+print((lijstje_nummers))
