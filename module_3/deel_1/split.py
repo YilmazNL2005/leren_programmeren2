@@ -69,7 +69,30 @@ def unieke_nummers_delen_b(nummers:list):
     return sorted(delen_b)
 
 def nummer_voorkomen(nummers:list):
-    return
+    return 69 in nummers and 33 in nummers
+
+def position(nummers:list):
+    positie = []
+    for index, num in enumerate(nummers):
+        if num == 2:
+            positie.append(index)
+    return positie
+
+def afwijking(nummers:list):
+    verschil_kwadraat = sum((x - gemiddeld_nummer(nummers)) ** 2 for x in nummers)
+    variantie = verschil_kwadraat / aantal_nummers(nummers)
+    standaardafwijking = math.sqrt(variantie)
+    return standaardafwijking
+
+def shuffle_lijst(nummers:list):
+    random.shuffle(nummers)
+    return nummers
+
+def random_nummer(nummers:list):
+    return nummers[random.randint(0,aantal_nummers(nummers)-1)]
+
+def verschil_control_nummer_b(nummers:list):
+    return abs(random_nummer(nummers) - 8)
 
 
 lijstje_nummers = [1, 10, 33, 9, 81, 69]
@@ -90,4 +113,8 @@ print(hoeveelheid_unieke_nummers(lijstje_nummers))
 print(unieke_nummers_delen_a(lijstje_nummers))
 print(unieke_nummers_delen_b(lijstje_nummers))
 print(nummer_voorkomen(lijstje_nummers))
-print((lijstje_nummers))
+print(position(lijstje_nummers))
+print(afwijking(lijstje_nummers))
+print(shuffle_lijst(lijstje_nummers))
+print(random_nummer(lijstje_nummers))
+print(verschil_control_nummer_b(lijstje_nummers))
