@@ -1,5 +1,8 @@
 def dorp(getal):
+    resultaat = ""
     for x in range(1, getal+1):
-        print(f"Hello from function town {x}!")
+        resultaat += f"Hello from function town {x}! \n"
+    return resultaat
 
-dorp(7)
+hello = dorp(7)
+print(hello)
